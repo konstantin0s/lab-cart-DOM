@@ -21,20 +21,20 @@ function deleteItem(e){
 function getPriceByProduct(itemNode){
 
 
-  var getQuantity = parseInt(document.getElementById('costUnit').value); 
-  // console.log(getQuantity);
-  var getInput = parseFloat(document.getElementById('quantity').value);
-  // console.log(getInput);
-  itemNode = getQuantity * getInput;
-  // console.log(itemNode); // it works
+  var getQuantity = parseFloat(document.getElementsByClassName('costUnit').value); 
+  console.log(getQuantity);
+  var getInput = parseFloat(document.getElementsByClassName('quantity').value);
 
-  if (itemNode === NaN && itemNode === "") {
-    document.getElementsByClassName("totalP")[0].innerHTML = "Please Enter Numbers";
-  } else {
-    document.getElementsByClassName("totalP")[0].innerHTML = "Total price is = $" + itemNode;
-  }
+  // itemNode = myQuantity * myInput;
 
- 
+  // var multiply = myQuantity * myInput;
+
+//  document.getElementsByClassName('result').innerHTML = "Total price is = $" + (myQuantity * myInput);
+
+  // if (result !== NaN) {
+  // 
+  // }
+
 
   //  document.getElementById('result').innerHTML = myResult;
   // itemNode = myResult;

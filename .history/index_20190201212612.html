@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <title>Ironhack cart</title>
 </head>
-
 <body>
   <h1  class="title">Iron Merchendasing Shop</h1>
   <div class="container">
@@ -23,19 +22,15 @@
           30
       </span> -->
       <label for="cost">
-          $<input type="text" placeholder="30" id="costUnit">
+          $<input type="text" type="number" placeholder="30" class="costUnit">
       </label>
     </div>
     <div class="input">
       <label for="unit">
          Quantity:
       </label>
-      <input type="text" placeholder="Add Quantity" id="quantity">
+      <input type="text" type="number" placeholder="Add Quantity" class="quantity">
     </div>
-    <!-- <p class="result">
-
-    </p>   -->
-
     <div class="totalP">
       <span class="price">
         $0 
@@ -50,9 +45,11 @@
     <div class="calculate">
       <button type="button" onclick="getPriceByProduct()" class="button btn-success" id="calc-prices-button">Calculate Prices</button>
     </div>
- 
 
-      <script type="text/javascript" src="./js/index.js"></script>
+    <div class="result">
 
+      </div>
+
+  <script type="text/javascript" src="./js/index.js"></script>
 </body>
 </html>

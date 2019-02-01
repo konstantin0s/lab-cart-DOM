@@ -28,13 +28,14 @@ function getPriceByProduct(itemNode){
   itemNode = getQuantity * getInput;
   // console.log(itemNode); // it works
 
-  if (itemNode === NaN && itemNode === "") {
-    document.getElementsByClassName("totalP")[0].innerHTML = "Please Enter Numbers";
-  } else {
-    document.getElementsByClassName("totalP")[0].innerHTML = "Total price is = $" + itemNode;
-  }
+  // var multiply = myQuantity * myInput;
 
- 
+var span = document.getElementsByClassName("totalP")[0].innerHTML = "Total price is = $" + itemNode;
+
+  // if (result !== NaN) {
+  // 
+  // }
+
 
   //  document.getElementById('result').innerHTML = myResult;
   // itemNode = myResult;

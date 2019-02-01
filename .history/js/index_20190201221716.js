@@ -26,15 +26,16 @@ function getPriceByProduct(itemNode){
   var getInput = parseFloat(document.getElementById('quantity').value);
   // console.log(getInput);
   itemNode = getQuantity * getInput;
-  // console.log(itemNode); // it works
+  console.log(itemNode)
 
-  if (itemNode === NaN && itemNode === "") {
-    document.getElementsByClassName("totalP")[0].innerHTML = "Please Enter Numbers";
-  } else {
-    document.getElementsByClassName("totalP")[0].innerHTML = "Total price is = $" + itemNode;
-  }
+  // var multiply = myQuantity * myInput;
 
- 
+//  document.getElementsByClassName('price').innerHTML = "Total price is = $" + itemNode;
+
+  // if (result !== NaN) {
+  // 
+  // }
+
 
   //  document.getElementById('result').innerHTML = myResult;
   // itemNode = myResult;

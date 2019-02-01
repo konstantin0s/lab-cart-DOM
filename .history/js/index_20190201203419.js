@@ -1,40 +1,34 @@
 
 
-  document.getElementById("calc-prices-button").addEventListener("click", getPriceByProduct);
+  document.getElementById("calc-prices-button").addEventListener("click", function(event){
             
-//         var clickedElement = event.target;
-//         var parentElement = event.target.parentElement;
+        var clickedElement = event.target;
+        var parentElement = event.target.parentElement;
 
-//         Retrieves the unit price of the product
-// Retrieves the quantity of items desired
-// Calculates the total price based on this data
-// Updates the total price in the DOM
-// getPriceByProduct();
+        //Retrieves the unit price of the product
+//Retrieves the quantity of items desired
+//Calculates the total price based on this data
+//Updates the total price in the DOM
+getPriceByProduct();
 
 
-
+    })
 
 function deleteItem(e){
    
 }
 
 function getPriceByProduct(itemNode){
+  // var getInput = document.getElementsByClassName("quantity").value;
 
-
-  var getQuantity = parseInt(document.getElementById('costUnit').value); 
-  // console.log(getQuantity);
-  var getInput = parseFloat(document.getElementById('quantity').value);
-  // console.log(getInput);
-  itemNode = getQuantity * getInput;
-  // console.log(itemNode); // it works
-
-  if (itemNode === NaN && itemNode === "") {
-    document.getElementsByClassName("totalP")[0].innerHTML = "Please Enter Numbers";
-  } else {
-    document.getElementsByClassName("totalP")[0].innerHTML = "Total price is = $" + itemNode;
+  var myQuantity = parseInt(document.getElementsByClassName('costUnit').value); 
+  var myInput = parseInt(document.getElementsByClassName('quantity').value);
+  var result = document.getElementById('result'); 
+  if (result !== NaN) {
+    itemNode = myQuantity * myInput;
   }
 
- 
+  console.log(itemNode);
 
   //  document.getElementById('result').innerHTML = myResult;
   // itemNode = myResult;
