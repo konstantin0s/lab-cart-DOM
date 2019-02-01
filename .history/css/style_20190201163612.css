@@ -10,7 +10,6 @@ body{
 
 .container {
   display: flex;
-  margin-right: 230px;
 }
 
 input {
@@ -47,12 +46,16 @@ input {
 
 .product {
   margin: 10px;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .cost {
   margin: 10px;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .input {
@@ -68,7 +71,7 @@ input {
   flex-direction: column;
   align-items: center;
   margin-top: 60px;
-  margin-left: -40px;
+  margin-left: -260px;
 }
 
 .remove {
