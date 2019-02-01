@@ -1,25 +1,8 @@
-
-body{
-  background-color: rgb(red, green, blue)
-}
-
-.title {
-  text-align: center;
-  padding: 40px;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 input {
   border: solid 1px black;
-  padding: 5px;
 }
 
-.button {
+.btn {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
@@ -47,30 +30,6 @@ input {
     border-color: #4cae4c;
 }
 
-.product {
-  margin: 10px;
-}
-
-.cost {
-  margin: 10px;
-}
-
-.input {
-  margin: 10px;
-}
-
-.totalP {
-  margin: 10px;
-}
-
-.calculate {
-  margin: 10px;
-}
-
-.remove {
-  margin: 10px;
-}
-
 .btn-delete {
     color: #fff;
     background-color: #CF000F;
@@ -79,5 +38,4 @@ input {
 
 .quantity {
   margin: 0 5px;
-  padding-right: 20px;
 }

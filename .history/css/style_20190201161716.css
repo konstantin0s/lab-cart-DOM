@@ -47,30 +47,6 @@ input {
     border-color: #4cae4c;
 }
 
-.product {
-  margin: 10px;
-}
-
-.cost {
-  margin: 10px;
-}
-
-.input {
-  margin: 10px;
-}
-
-.totalP {
-  margin: 10px;
-}
-
-.calculate {
-  margin: 10px;
-}
-
-.remove {
-  margin: 10px;
-}
-
 .btn-delete {
     color: #fff;
     background-color: #CF000F;

@@ -12,6 +12,7 @@ body{
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin: 20px;
 }
 
 input {
@@ -45,30 +46,6 @@ input {
     color: #fff;
     background-color: #5cb85c;
     border-color: #4cae4c;
-}
-
-.product {
-  margin: 10px;
-}
-
-.cost {
-  margin: 10px;
-}
-
-.input {
-  margin: 10px;
-}
-
-.totalP {
-  margin: 10px;
-}
-
-.calculate {
-  margin: 10px;
-}
-
-.remove {
-  margin: 10px;
 }
 
 .btn-delete {

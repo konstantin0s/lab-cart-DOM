@@ -5,16 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <script type="text/javascript" src="./js/index.js"></script>
   <title>Ironhack cart</title>
 </head>
 <body>
-  <h1  class="title">Iron Merchendasing Shop</h1>
+
   <div class="container">
+    <h1>Iron Merchendasing Shop</h1>
     <div class="product">
       <span class="proName">
-      Iron Clothes:
+      Iron Clothes
       </span>
     </div>
     <div class="cost">
@@ -26,23 +28,19 @@
       <label for="unit">
          Quantity:
       </label>
-      <input type="text" placeholder="Add Quantity" class="quantity">
+      <input type="text" placeholder="Add Quantity">
     </div>
     <div class="totalP">
       <span class="price">
-        $0 display total
+        $0 (Quantity * price ) = total.
       </span>
     </div>
-    <div class="calculate">
-      <button class="button btn-success">Calculate Prices</button>
-    </div>
-
     <div class="remove">
-      <button class="button btn-delete" type="button">Delete</button>
+      <button type="button">Delete</button>
     </div>
   </div>
 
 
-  <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
 </body>
 </html>
