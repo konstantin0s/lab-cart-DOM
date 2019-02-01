@@ -57,7 +57,7 @@ function createItemNode(dataType, itemData){
 }
 
 function createNewItemRow(itemName, itemUnitPrice){
-  var h1 = document.createElement("H5");                       // Create a <p> element
+  var h1 = document.createElement("H1");                       // Create a <p> element
   itemName = document.createTextNode("Sexy Shirt: ");      // Create a text node
   h1.appendChild(itemName);                                          // Append the text to <p>
   document.getElementsByClassName("newRowItems")[0].appendChild(h1);   

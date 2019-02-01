@@ -57,20 +57,10 @@ function createItemNode(dataType, itemData){
 }
 
 function createNewItemRow(itemName, itemUnitPrice){
-  var h1 = document.createElement("H5");                       // Create a <p> element
+  var para = document.createElement("P");                       // Create a <p> element
   itemName = document.createTextNode("Sexy Shirt: ");      // Create a text node
-  h1.appendChild(itemName);                                          // Append the text to <p>
-  document.getElementsByClassName("newRowItems")[0].appendChild(h1);   
-  
-  var label = document.createElement("LABEL");
-  var par = document.createElement("P");                       // Create a <p> element
-  var dollar = document.createTextNode("$");
-  par.appendChild(dollar);  
-  itemUnitPrice = document.createElement("INPUT");
-  label.appendChild(itemUnitPrice);
-  document.getElementsByClassName('newRowItems')[0].appendChild(par);
-  document.getElementsByClassName('newRowItems')[0].appendChild(label);
-  
+  para.appendChild(itemName);                                          // Append the text to <p>
+  document.getElementsByClassName("proName")[0].appendChild(para);     
 }
 
 function createNewItem(){

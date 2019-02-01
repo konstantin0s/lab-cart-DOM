@@ -57,10 +57,10 @@ function createItemNode(dataType, itemData){
 }
 
 function createNewItemRow(itemName, itemUnitPrice){
-  var h1 = document.createElement("H5");                       // Create a <p> element
+  var para = document.createElement("P");                       // Create a <p> element
   itemName = document.createTextNode("Sexy Shirt: ");      // Create a text node
-  h1.appendChild(itemName);                                          // Append the text to <p>
-  document.getElementsByClassName("newRowItems")[0].appendChild(h1);   
+  para.appendChild(itemName);                                          // Append the text to <p>
+  document.getElementsByClassName("newRowItems")[0].appendChild(para);   
   
   var label = document.createElement("LABEL");
   var par = document.createElement("P");                       // Create a <p> element

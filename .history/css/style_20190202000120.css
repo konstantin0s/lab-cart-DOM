@@ -94,18 +94,6 @@ input {
 
 .newRowItems p{
  position: relative;
- top: -40px;
- left: 175px;
+ top: 30px;
+  
 }
-
-.newRowItems h5{
-  position: relative;
-  top: 0px;
-  left: 20px;
- }
-
- .newRowItems input{
-  position: relative;
-  top: -91px;
-  left: 190px;
- }

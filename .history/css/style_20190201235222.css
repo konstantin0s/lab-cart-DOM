@@ -88,24 +88,5 @@ input {
 
 .newRowItems {
   display: flex;
-  flex-direction: column;
-  
+  margin-right: 230px;
 }
-
-.newRowItems p{
- position: relative;
- top: -40px;
- left: 175px;
-}
-
-.newRowItems h5{
-  position: relative;
-  top: 0px;
-  left: 20px;
- }
-
- .newRowItems input{
-  position: relative;
-  top: -91px;
-  left: 190px;
- }
