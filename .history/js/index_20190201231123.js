@@ -1,7 +1,6 @@
 
 
   document.getElementById("calc-prices-button").addEventListener("click", getTotalPrice);
-  document.getElementById("addExtra").addEventListener("click", createNewItem);
             
 //         var clickedElement = event.target;
 //         var parentElement = event.target.parentElement;
@@ -61,13 +60,10 @@ function createNewItemRow(itemName, itemUnitPrice){
 }
 
 function createNewItem(){
-  var para = document.createElement("P");                       // Create a <p> element
-  var t = document.createTextNode("Sexy Shirt");      // Create a text node
-  para.appendChild(t);                                          // Append the text to <p>
-  document.getElementsByClassName("product")[0].appendChild(para);                        
-  // var add = document.getElementsByClassName('product')[0];
-  // // console.log(add);
-  // document.add.appendChild(appe);           
+  var btn = document.createElement("BUTTON");        // Create a <button> element
+  var t = document.createTextNode("Add Product");       // Create a text node
+  btn.appendChild(t);                                // Append the text to <button>
+  document.body.appendChild(btn);           
 }
 
 window.onload = function(){

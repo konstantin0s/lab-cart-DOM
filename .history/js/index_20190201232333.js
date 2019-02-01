@@ -61,13 +61,12 @@ function createNewItemRow(itemName, itemUnitPrice){
 }
 
 function createNewItem(){
-  var para = document.createElement("P");                       // Create a <p> element
-  var t = document.createTextNode("Sexy Shirt");      // Create a text node
-  para.appendChild(t);                                          // Append the text to <p>
-  document.getElementsByClassName("product")[0].appendChild(para);                        
-  // var add = document.getElementsByClassName('product')[0];
-  // // console.log(add);
-  // document.add.appendChild(appe);           
+  var btn = document.createElement("p");        // Create a <button> element
+  var t = document.createTextNode("Shirt");       // Create a text node
+  btn.appendChild(t);                                // Append the text to <button>
+  var add = document.getElementsByClassName('product');
+  console.log(add);
+  // document.add.appendChild(btn);           
 }
 
 window.onload = function(){

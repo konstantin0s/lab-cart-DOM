@@ -64,7 +64,7 @@ function createNewItem(){
   var para = document.createElement("P");                       // Create a <p> element
   var t = document.createTextNode("Sexy Shirt");      // Create a text node
   para.appendChild(t);                                          // Append the text to <p>
-  document.getElementsByClassName("product")[0].appendChild(para);                        
+  document.getElementById("product")[0].appendChild(para);                        
   // var add = document.getElementsByClassName('product')[0];
   // // console.log(add);
   // document.add.appendChild(appe);           
