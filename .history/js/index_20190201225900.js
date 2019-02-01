@@ -1,6 +1,6 @@
 
 
-  document.getElementById("calc-prices-button").addEventListener("click", getTotalPrice);
+  document.getElementById("calc-prices-button").addEventListener("click", getPriceByProduct);
             
 //         var clickedElement = event.target;
 //         var parentElement = event.target.parentElement;
@@ -20,23 +20,36 @@ function deleteItem(e){
 
 function getPriceByProduct(itemNode){
 
+
+  var getQuantity = parseInt(document.getElementById('costUnit').value); 
+  // console.log(getQuantity);
+  var getInput = parseFloat(document.getElementById('quantity').value);
+  // console.log(getInput);
+  itemNode = getQuantity * getInput;
+  // console.log(itemNode); // it works
+
+  if (!itemNode) {
+    document.getElementsByClassName("totalP")[0].innerHTML = "Please Enter Numbers";
+  } else {
+    document.getElementsByClassName("totalP")[0].innerHTML = "Total price is = $" + itemNode;
+  }
+
+ 
+
+  //  document.getElementById('result').innerHTML = myResult;
+  // itemNode = myResult;
+  // return itemNode;
 }
+
+
 
 
 function updatePriceByProduct(productPrice, index){
 
 }
 
-function getTotalPrice(result) {
-   var getQuantity = parseInt(document.getElementById('costUnit').value); 
-   var getInput = parseFloat(document.getElementById('quantity').value);
-   var result = getQuantity * getInput;
- 
-    if (!result) {
-    document.getElementsByClassName("totalP")[0].innerHTML = "Please Enter Numbers";
-  } else {
-    document.getElementsByClassName("totalP")[0].innerHTML = "Total price is = $" + result;
-  }
+function getTotalPrice() {
+
 }
 
 function createQuantityInput(){

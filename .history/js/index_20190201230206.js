@@ -1,6 +1,6 @@
 
 
-  document.getElementById("calc-prices-button").addEventListener("click", getTotalPrice);
+  document.getElementById("calc-prices-button").addEventListener("click", getPriceByProduct);
             
 //         var clickedElement = event.target;
 //         var parentElement = event.target.parentElement;
@@ -23,6 +23,8 @@ function getPriceByProduct(itemNode){
 }
 
 
+
+
 function updatePriceByProduct(productPrice, index){
 
 }
@@ -32,7 +34,7 @@ function getTotalPrice(result) {
    var getInput = parseFloat(document.getElementById('quantity').value);
    var result = getQuantity * getInput;
  
-    if (!result) {
+    if (!itemNode) {
     document.getElementsByClassName("totalP")[0].innerHTML = "Please Enter Numbers";
   } else {
     document.getElementsByClassName("totalP")[0].innerHTML = "Total price is = $" + result;
