@@ -130,12 +130,12 @@ class UI {
 
 document.addEventListener("DOMContentLoaded", UI.displayProducts);
 
-document.querySelector("#product-form").addEventListener("click", (e) => {
+document.querySelector("product-form").addEventListener("click", (e) => {
   // e.preventDefault();
   const name = document.querySelector("#newProd").value;
   const price = document.querySelector("#newPrice").value;
   const quantity = document.querySelector("#newQty").value;
 
   const product = new Product(name, price, quantity);
-    UI.addProductToList(product);
+   console.log(product);
 })

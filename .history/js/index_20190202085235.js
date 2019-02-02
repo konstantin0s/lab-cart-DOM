@@ -54,7 +54,7 @@ function createQuantityNode(){
 
 function createItemNode(dataType, itemData){
 
-}
+}crea
 
 function createNewItemRow(itemName, itemUnitPrice){
   var h1 = document.createElement("H5");                       // Create a <p> element
@@ -93,7 +93,7 @@ window.onload = function(){
 
 class Product {
   constructor(name, price, quantity) {
-    this.name = name;
+    this.name = product;
     this.price = price;
     this.quantity = quantity;
   }
@@ -113,29 +113,15 @@ class UI {
 
      products.forEach((product) => UI.addProductToList(product));
 
-     }
      static addProductToList(product) {
-      var list = document.querySelector("#product-list");
-      var  row = document.createElement("TR");
-      row.innerHTML = `
-      <td>${product.name}</td>
-      <td>${product.price}</td>
-      <td>${product.quantity}</td>
-     
-      `;
-      list.appendChild(row);
+       const list = document.querySelector("#product-list");
+       const  row = document.createElement("tr");
+       row.innerHTML = `
+       <td>${product.name}</td>
+       <td>${product.price}</td>
+       <td>${product.quantity}</td>
+      
+       `;list.appendChild(row);
+     }
   }
-}
 
-
-document.addEventListener("DOMContentLoaded", UI.displayProducts);
-
-document.querySelector("#product-form").addEventListener("click", (e) => {
-  // e.preventDefault();
-  const name = document.querySelector("#newProd").value;
-  const price = document.querySelector("#newPrice").value;
-  const quantity = document.querySelector("#newQty").value;
-
-  const product = new Product(name, price, quantity);
-    UI.addProductToList(product);
-})

@@ -137,5 +137,5 @@ document.querySelector("#product-form").addEventListener("click", (e) => {
   const quantity = document.querySelector("#newQty").value;
 
   const product = new Product(name, price, quantity);
-    UI.addProductToList(product);
+   console.log(product);
 })

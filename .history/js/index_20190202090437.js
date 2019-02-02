@@ -115,8 +115,8 @@ class UI {
 
      }
      static addProductToList(product) {
-      var list = document.querySelector("#product-list");
-      var  row = document.createElement("TR");
+      const list = document.querySelector("#product-list");
+      const  row = document.createElement("TR");
       row.innerHTML = `
       <td>${product.name}</td>
       <td>${product.price}</td>
@@ -130,12 +130,12 @@ class UI {
 
 document.addEventListener("DOMContentLoaded", UI.displayProducts);
 
-document.querySelector("#product-form").addEventListener("click", (e) => {
+document.querySelector("product-form").addEventListener("submit", (e) => {
   // e.preventDefault();
-  const name = document.querySelector("#newProd").value;
-  const price = document.querySelector("#newPrice").value;
-  const quantity = document.querySelector("#newQty").value;
+  const name = document.querySelector("newProd").value;
+  const price = document.querySelector("newPrice").value;
+  const quantity = document.querySelector("newQty").value;
 
   const product = new Product(name, price, quantity);
-    UI.addProductToList(product);
+   console.log(product);
 })
