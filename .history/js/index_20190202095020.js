@@ -102,18 +102,17 @@ class Product {
 //local storage
 class Store {
   static getProducts() {
-    var products;
+    var books;
     if (localStorage.getItem('products') === null) {
       products = [];
     } else {
-      products = JSON.parse(localStorage.getItem('products'));
+      product.JSON.parse(localStorage.getItem('product'));
     }
 
     return products;
   }
 
   static addProduct(product) {
-     var products = Store.getProducts();
        products.push(product);
        localStorage.setItem('products', JSON.stringify(products));
   }
@@ -193,9 +192,6 @@ document.querySelector("#product-form").addEventListener("submit", (e) => {
 
     UI.addProductToList(product);
 
-    //add product to Store
-    Store.addProduct(product);
-
     UI.clearFields();
   }
 
@@ -205,8 +201,5 @@ document.querySelector("#product-form").addEventListener("submit", (e) => {
 //delete product
 document.querySelector("#product-list").addEventListener("click", (e) => {
   UI.deleteProduct(e.target);
-
-  //remove product from store
-Store.removeProduct(e.target.parentElement.previousElementSibling.textContent);
 
 });

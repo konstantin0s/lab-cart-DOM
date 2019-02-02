@@ -77,18 +77,18 @@ function createNewItem(){
                      
 }
 
-// window.onload = function(){
-//   var calculatePriceButton = document.getElementById('calc-prices-button');
-//   var createItemButton = document.getElementById('new-item-create');
-//   var deleteButtons = document.getElementsByClassName('btn-delete');
+window.onload = function(){
+  var calculatePriceButton = document.getElementById('calc-prices-button');
+  var createItemButton = document.getElementById('new-item-create');
+  var deleteButtons = document.getElementsByClassName('btn-delete');
 
-//   calculatePriceButton.onclick = getTotalPrice;
-//   createItemButton.onclick = createNewItem;
+  calculatePriceButton.onclick = getTotalPrice;
+  createItemButton.onclick = createNewItem;
 
-//   for(var i = 0; i<deleteButtons.length ; i++){
-//     deleteButtons[i].onclick = deleteItem;
-//   }
-// };
+  for(var i = 0; i<deleteButtons.length ; i++){
+    deleteButtons[i].onclick = deleteItem;
+  }
+};
 
 
 class Product {
@@ -99,42 +99,17 @@ class Product {
   }
 }
 
-//local storage
-class Store {
-  static getProducts() {
-    var products;
-    if (localStorage.getItem('products') === null) {
-      products = [];
-    } else {
-      products = JSON.parse(localStorage.getItem('products'));
-    }
-
-    return products;
-  }
-
-  static addProduct(product) {
-     var products = Store.getProducts();
-       products.push(product);
-       localStorage.setItem('products', JSON.stringify(products));
-  }
-
-  static removeProduct(quantity) {
-    var products = Store.getProducts();
-    products.forEach((product, index) => {
-      if (product.quantity === quantity) {
-        products.splice(index, 1);
-      }
-    });
-
-    localStorage.setItem('products', JSON.stringify(products));
-
-  }
-}
-
 class UI {
   static displayProducts() {
-  
-     const products = Store.getProducts();
+     const StoredProducts = [
+       {
+         name: "socket",
+         price: "$22",
+         quantity: "2"
+       }
+     ];
+
+     const products = StoredProducts;
 
      products.forEach((product) => UI.addProductToList(product));
 
@@ -159,16 +134,6 @@ class UI {
     }
   }
 
-  static showAlert(message, className) {
-  var div = document.createElement('div');
-     div.className = `alert alert-${className}`;
-     div.appendChild(document.createTextNode(message));
-     var container = document.querySelector('#amess');
-     var form = document.querySelector('#product-form');
-     container.insertBefore(div, form);
-     setTimeout(() => document.querySelector('.alert').remove(), 3000);
-  }
-
   static clearFields() {
     const name = document.querySelector("#newProd").value = "";
     const price = document.querySelector("#newPrice").value = "";
@@ -179,7 +144,7 @@ class UI {
 
 document.addEventListener("DOMContentLoaded", UI.displayProducts);
 
-document.querySelector("#product-form").addEventListener("submit", (e) => {
+document.querySelector("#product-form").addEventListener("click", (e) => {
   // e.preventDefault();
   const name = document.querySelector("#newProd").value;
   const price = document.querySelector("#newPrice").value;
@@ -187,14 +152,11 @@ document.querySelector("#product-form").addEventListener("submit", (e) => {
 
   //validate
   if (name === '' || price === '' || quantity === '') {
-    UI.showAlert('please fill in all fields', 'danger');
+    alert('please fill in all fields');
   } else {
     const product = new Product(name, price, quantity);
 
     UI.addProductToList(product);
-
-    //add product to Store
-    Store.addProduct(product);
 
     UI.clearFields();
   }
@@ -205,8 +167,5 @@ document.querySelector("#product-form").addEventListener("submit", (e) => {
 //delete product
 document.querySelector("#product-list").addEventListener("click", (e) => {
   UI.deleteProduct(e.target);
-
-  //remove product from store
-Store.removeProduct(e.target.parentElement.previousElementSibling.textContent);
 
 });

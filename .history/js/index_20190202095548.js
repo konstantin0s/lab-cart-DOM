@@ -106,7 +106,7 @@ class Store {
     if (localStorage.getItem('products') === null) {
       products = [];
     } else {
-      products = JSON.parse(localStorage.getItem('products'));
+      products.JSON.parse(localStorage.getItem('products'));
     }
 
     return products;
@@ -205,8 +205,5 @@ document.querySelector("#product-form").addEventListener("submit", (e) => {
 //delete product
 document.querySelector("#product-list").addEventListener("click", (e) => {
   UI.deleteProduct(e.target);
-
-  //remove product from store
-Store.removeProduct(e.target.parentElement.previousElementSibling.textContent);
 
 });

@@ -206,7 +206,4 @@ document.querySelector("#product-form").addEventListener("submit", (e) => {
 document.querySelector("#product-list").addEventListener("click", (e) => {
   UI.deleteProduct(e.target);
 
-  //remove product from store
-Store.removeProduct(e.target.parentElement.previousElementSibling.textContent);
-
 });
