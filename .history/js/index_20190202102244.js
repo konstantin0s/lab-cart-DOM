@@ -3,10 +3,8 @@
   document.getElementById("calc-prices-button").addEventListener("click", getTotalPrice);
   document.getElementById("addExtra").addEventListener("click", createNewItemRow);
   document.getElementById("addExtra").addEventListener("click", createQuantityNode);
-  document.getElementById("addExtra").addEventListener("click", createQuantityInput);
-  document.getElementById("addExtra").addEventListener("click", getPriceByProduct);
-  document.getElementById("addExtra").addEventListener("click",   createDeleteButton);
-
+  
+            
 //         var clickedElement = event.target;
 //         var parentElement = event.target.parentElement;
 
@@ -24,11 +22,7 @@ function deleteItem(e){
 }
 
 function getPriceByProduct(itemNode){
-  var h5 = document.createElement("H5");                       // Create a <p> element
-  itemNode = document.createTextNode("$0 "); 
-  h5.className = 'defPrice';     // Create a text node
-  h5.appendChild(itemNode);                                          // Append the text to <p>
-  document.getElementsByClassName("newRowItems")[0].appendChild(h5);   
+
 }
 
 
@@ -48,25 +42,16 @@ function getTotalPrice(result) {
   }
 }
 
-function createQuantityInput() { 
-var label = document.createElement("LABEL"); 
-label.className = 'inputQua';    
-var quaInput = document.createElement("INPUT");
-label.appendChild(quaInput);
-document.getElementsByClassName('newRowItems')[0].appendChild(label);
+function createQuantityInput(){
+
 }
 
 function createDeleteButton(){
-var button = document.createElement("BUTTON"); 
-button.className = 'button btn-delete';    
-var quaDel = document.createTextNode("Delete");
-button.appendChild(quaDel);
-document.getElementsByClassName('newRowItems')[0].appendChild(button);
+
 }
 
 function createQuantityNode(){
-  var h5 = document.createElement("H5");
-  h5.className = 'quan';                       // Create a <p> element
+  var h5 = document.createElement("H5");                       // Create a <p> element
   var quaNode = document.createTextNode("Quantity: ");      // Create a text node
   h5.appendChild(quaNode);                                          // Append the text to <p>
   document.getElementsByClassName("newRowItems")[0].appendChild(h5);   
@@ -77,9 +62,8 @@ function createItemNode(dataType, itemData){
 }
 
 function createNewItemRow(itemName, itemUnitPrice){
-  var h5 = document.createElement("H5");                       // Create a <p> element
-  itemName = document.createTextNode("Sexy Shirt: "); 
-  h5.className = 'sexy';     // Create a text node
+  var h5 = document.createElement("P");                       // Create a <p> element
+  itemName = document.createTextNode("Sexy Shirt: ");      // Create a text node
   h5.appendChild(itemName);                                          // Append the text to <p>
   document.getElementsByClassName("newRowItems")[0].appendChild(h5);   
   

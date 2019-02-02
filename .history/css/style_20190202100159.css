@@ -1,7 +1,6 @@
 
 body{
-  background-color: rgb(red, green, blue);
-  overflow-x: hidden;
+  background-color: rgb(red, green, blue)
 }
 
 .title {
@@ -99,16 +98,11 @@ input {
  left: 175px;
 }
 
-.newRowItems .sexy{
+.newRowItems h5{
   position: relative;
-  top: -2x;
+  top: 0px;
   left: 20px;
  }
- .newRowItems .quan {
-  position: relative;
-  top: -130px;
-  left: 460px;
-}
 
  .newRowItems input{
   position: relative;
@@ -116,61 +110,7 @@ input {
   left: 190px;
  }
 
- 
- .newRowItems .inputQua{
-  position: relative;
-  top: -80px;
-  left: 380px;
- }
-
-  .newRowItems .defPrice{
-  position: relative;
-  top: -210px;
-  left: 845px;
- }
-
  /* style new added new products*/
  #amess {
    display:flex;
-   width:50%;
-   height: 500px;
-   flex-direction: column;
-   /* align-items: center; */
-   margin-bottom: 300px;
-   left: -400px;
  }
-
-.addProductButton {
-  position: relative;
-  top: -230px;
-  left: 555px;
-
-}
-
-
-.newRowItems button {
-  position: relative;
-  top: -253px;
-  left: 890px;
-  width: 70px;
-  display: inline-block;
-  padding: 6px 12px;
-  margin-bottom: 0;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.42857143;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
-
-}

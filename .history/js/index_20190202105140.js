@@ -4,9 +4,7 @@
   document.getElementById("addExtra").addEventListener("click", createNewItemRow);
   document.getElementById("addExtra").addEventListener("click", createQuantityNode);
   document.getElementById("addExtra").addEventListener("click", createQuantityInput);
-  document.getElementById("addExtra").addEventListener("click", getPriceByProduct);
-  document.getElementById("addExtra").addEventListener("click",   createDeleteButton);
-
+  
 //         var clickedElement = event.target;
 //         var parentElement = event.target.parentElement;
 
@@ -57,11 +55,7 @@ document.getElementsByClassName('newRowItems')[0].appendChild(label);
 }
 
 function createDeleteButton(){
-var button = document.createElement("BUTTON"); 
-button.className = 'button btn-delete';    
-var quaDel = document.createTextNode("Delete");
-button.appendChild(quaDel);
-document.getElementsByClassName('newRowItems')[0].appendChild(button);
+
 }
 
 function createQuantityNode(){

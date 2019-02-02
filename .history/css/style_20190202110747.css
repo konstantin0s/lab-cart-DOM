@@ -148,7 +148,7 @@ input {
 }
 
 
-.newRowItems button {
+.delButton {
   position: relative;
   top: -253px;
   left: 890px;

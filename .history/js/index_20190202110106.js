@@ -56,9 +56,9 @@ label.appendChild(quaInput);
 document.getElementsByClassName('newRowItems')[0].appendChild(label);
 }
 
-function createDeleteButton(){
+function createDeleteButton(button){
 var button = document.createElement("BUTTON"); 
-button.className = 'button btn-delete';    
+button.className = 'button';    
 var quaDel = document.createTextNode("Delete");
 button.appendChild(quaDel);
 document.getElementsByClassName('newRowItems')[0].appendChild(button);
