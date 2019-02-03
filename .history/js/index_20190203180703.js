@@ -49,9 +49,13 @@ prodList.addEventListener("click", deleteItem);
 function deleteItem(e){
  if (e.target.classList.contains("btn-danger")) {
     if (confirm("Are you sure?")) {
-
+      console.log(1);
       //removes the product div (which is parent of remove div and remove div is parent of btn-danger)
       var prod = e.target.parentElement.parentElement.remove();
+        
+      // var prod =  e.target.parentElement;
+      // .remove(e.target.parentElement);
+      // prod.remove(prod);
       console.log(prod);
      } 
 

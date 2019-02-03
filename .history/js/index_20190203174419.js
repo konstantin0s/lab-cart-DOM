@@ -41,17 +41,17 @@
 
 // var button = document.querySelector(".btn-danger").addEventListener
 // ("click", deleteItem);
-// var butt = document.querySelector('.btn-danger');
+var butt = document.querySelector('.btn-danger');
 
-var prodList = document.querySelector('#container');
+var prodList = document.querySelector('.product');
 prodList.addEventListener("click", deleteItem);
 
 function deleteItem(e){
  if (e.target.classList.contains("btn-danger")) {
     if (confirm("Are you sure?")) {
-
-      //removes the product div (which is parent of remove div and remove div is parent of btn-danger)
-      var prod = e.target.parentElement.parentElement.remove();
+      // var prod = e.target.parentElement;
+      var prod =  e.target.parentElement.removeChild(e.target.parentElement.parentElement.parentElement);
+      // prodList.remove(prod);
       console.log(prod);
      } 
 
