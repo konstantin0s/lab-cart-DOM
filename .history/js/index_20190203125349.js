@@ -73,7 +73,7 @@ function updatePriceByProduct(productPrice, index){
 
 function getTotalPrice() {  //works individual products
   var products = document.getElementsByClassName("product");  
-  var cartTotalPrice = document.querySelector("#cart-total-price span"); //update dinamic on each input.
+  var cartTotalPrice = document.querySelector(".totalP span");
   cartTotalPrice.innerText = 0;
 
 

@@ -1,5 +1,5 @@
 
-  // document.getElementById("calc-prices-button").addEventListener("click", getTotalPrice);
+  document.getElementById("calc-prices-button").addEventListener("click", getTotalPrice);
   // document.getElementById("addExtra").addEventListener("click", createNewItemRow);
   // document.getElementById("addExtra").addEventListener("click", createQuantityNode);
   // document.getElementById("addExtra").addEventListener("click", createQuantityInput);
@@ -73,15 +73,17 @@ function updatePriceByProduct(productPrice, index){
 
 function getTotalPrice() {  //works individual products
   var products = document.getElementsByClassName("product");  
-  var cartTotalPrice = document.querySelector("#cart-total-price span"); //update dinamic on each input.
+  var cartTotalPrice = document.getElementsByClassName("sum");
   cartTotalPrice.innerText = 0;
 
 
   for (var i = 0; i < products.length; i++) {          
-   products[i].querySelector(".totalP span").innerText =
-   Number(Number(products[i].querySelector(".price span").innerText) * Number(products[i].querySelector(".quantity").value)); 
- 
-   cartTotalPrice.innerText = Number(cartTotalPrice.innerText) + Number(products[i].querySelector(".totalP span").innerText);
+  products[i].querySelector(".totalP span").innerText =
+   Number(Number(products[i].querySelector(".price span").innerText) * 
+   Number(products[i].querySelector(".quantity").value)); 
+   
+  //  cartTotalPrice.innerHTML = Number(cartTotalPrice.innerText) + 
+  //  Number(products[i].querySelector(".totalP span").innerText);
   
 
   }
