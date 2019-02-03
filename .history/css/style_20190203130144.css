@@ -85,7 +85,7 @@ input {
 
 #cart-total-price {
   display: flex;
-  justify-content: center;
+align-content: center;
 }
 
 /* total button*/

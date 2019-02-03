@@ -85,6 +85,11 @@ function getTotalPrice() {  //works individual products
    cartTotalPrice.innerText = Number(cartTotalPrice.innerText) + 
    Number(products[i].querySelector(".totalP span").innerText);
   }
+
+// total = parseInt(total) + parseInt(amount);
+// document.getElementById("total_storage").value="";
+// document.getElementById("total_storage").value = total;
+// document.getElementById("total_display").innerHTML = total;
 }
 
 

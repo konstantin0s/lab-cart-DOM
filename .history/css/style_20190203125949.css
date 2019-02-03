@@ -83,7 +83,8 @@ input {
   width: 6%;
 } 
 
-#cart-total-price {
+.cart-total-price {
+  text-align: center;
   display: flex;
   justify-content: center;
 }
