@@ -103,7 +103,7 @@ function createNewItemRow(e){
   e.preventDefault();
   //get new product value
   var newProd = document.getElementById("newProd").value;
-  var newPr = document.getElementById("newPrice").value;
+  var quant = document.getElementById("newQuan").value;
   
   //new div & span product name
   var div = document.createElement("div");
@@ -114,20 +114,13 @@ function createNewItemRow(e){
   span.appendChild(document.createTextNode(newProd));
 
 
- //new div & span product name
- var divPrice = document.createElement("div");
- divPrice.className = "prices";
- var spanPrice = document.createElement("span");
- spanPrice.className = "newPrice";
-//  console.log(spanPrice);
- divPrice.appendChild(spanPrice);
- console.log(divPrice);
- //append new product to new span
- spanPrice.appendChild(document.createTextNode(newPr));
-
-  // var divQua = document.createElement("div");
-  // var quaSpan = document.createElement("input");
-  // divQua.appendChild(quaSpan);
+  //new div & span quantity name
+  var divPr = document.createElement("div");
+  div.className = "price";
+  var quaSpan = document.createElement("span");
+  div.appendChild(quaSpan);
+  //append new product to new span
+  quaSpan.appendChild(document.createTextNode(quant));
    
   // var divDel = document.createElement("div");
   // divDel.className = "remove";

@@ -92,57 +92,16 @@ function createItemNode(dataType, itemData){
 
 }
 
+function createNewItemRow(itemName, itemUnitPrice){
+
+  var form = document.getElementById("addNewProd");
+  //add new product here
+  var prodList = document.querySelector("#container");
+
   //Form submit event
-var form = document.querySelector("#addNewProd");
-form.addEventListener("submit", createNewItemRow);
-//add new product here
-var prodList = document.querySelector("#container");
-//get new product value
+  form.addEventListener("submit", addProduct);
 
-function createNewItemRow(e){
-  e.preventDefault();
-  //get new product value
   var newProd = document.getElementById("newProd").value;
-  var newPr = document.getElementById("newPrice").value;
-  
-  //new div & span product name
-  var div = document.createElement("div");
-  div.className = "product";
-  var span = document.createElement("span");
-  div.appendChild(span);
-  //append new product to new span
-  span.appendChild(document.createTextNode(newProd));
-
-
- //new div & span product name
- var divPrice = document.createElement("div");
- divPrice.className = "prices";
- var spanPrice = document.createElement("span");
- spanPrice.className = "newPrice";
-//  console.log(spanPrice);
- divPrice.appendChild(spanPrice);
- console.log(divPrice);
- //append new product to new span
- spanPrice.appendChild(document.createTextNode(newPr));
-
-  // var divQua = document.createElement("div");
-  // var quaSpan = document.createElement("input");
-  // divQua.appendChild(quaSpan);
-   
-  // var divDel = document.createElement("div");
-  // divDel.className = "remove";
-  // var deleteBtn = document.createElement("button");
-  // deleteBtn.className ="button btn-danger";
-  // deleteBtn.appendChild(document.createTextNode("Delete"));
-  // divDel.appendChild(deleteBtn);
-
-
-  //add new product to the div container
-   prodList.appendChild(div);
-   console.log(prodList);
-
-
-  
 
   // var h5 = document.createElement("H5");                       // Create a <p> element
   // itemName = document.createTextNode("Sexy Shirt: "); 

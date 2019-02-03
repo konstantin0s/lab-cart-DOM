@@ -120,8 +120,8 @@ function createNewItemRow(e){
  var spanPrice = document.createElement("span");
  spanPrice.className = "newPrice";
 //  console.log(spanPrice);
- divPrice.appendChild(spanPrice);
  console.log(divPrice);
+ divPrice.appendChild(spanPrice);
  //append new product to new span
  spanPrice.appendChild(document.createTextNode(newPr));
 
