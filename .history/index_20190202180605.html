@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Ironhack cart</title>
+</head>
+
+<body>
+  <h1  class="title">Iron Merchendasing Shop</h1>
+<!-- 
+  <div class="container mt-4" id="amess">
+    <h1 class="display-4 text-center">
+      <i class="fas fa-book-open text-primary"></i>
+      My <span class="text-primary">Products</span>List
+      </h1>
+      <form action="" id="product-form">
+        <div class="form-group">
+          <label for="product">Product</label>
+          <input id="newProd" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <label for="price">$:</label>
+          <input id="newPrice" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <label for="quantity">QTY</label>
+          <input id="newQty" class="form-control" type="text">
+        </div>
+        <input type="submit" value="Add Product"
+          class="btn btn-primary btn-block">
+     </form>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Product:</th>
+              <th class="fPrice">Price:</th>
+              <th class="fQua">Quantity:</th>
+              <th class="fTotal">Total:</th>
+              <th></th>
+            </tr>
+          </thead>
+            <tbody id="product-list"></tbody>
+          </table>
+  </div>   -->
+
+
+  <div class="container">
+      <form action="" id="form">
+        
+    <div class="product">
+      <span class="proName">
+       <h5> Iron Clothes:</h5>
+      </span>
+    </div>
+
+    <div class="cost-1">
+      <label for="cost">
+          $<input type="text" value="30" readonly="readonly" name="input" id="costUnit">
+      </label>
+    </div>
+
+    <div class="input-1">
+      <label for="unit">
+         <h5>Quantity:</h5>
+      </label>
+         <input type="text" placeholder="Add Quantity" name="input" id="quantity">
+    </div>
+
+    <div class="totalP-1">
+      <span class="price" id="price">
+        $0 
+      </span>
+    </div>
+
+    <div class="remove">
+        <button class="button btn-delete" type="button">Delete</button>
+    </div>
+       
+    <!-- Second product-->
+      <div class="second">
+    <div class="product">
+        <span class="proName">
+         <h5> Sexy Shirt:</h5>
+        </span>
+      </div>
+  
+      <div class="cost-1">
+        <label for="cost">
+            $<input type="text" value="30" readonly="readonly" name="input">
+        </label>
+      </div>
+  
+      <div class="input-1">
+        <label for="unit">
+           <h5>Quantity:</h5>
+        </label>
+           <input type="text" placeholder="Add Quantity" name="input">
+      </div>
+  
+      <div class="totalP-1">
+        <span class="price">
+          $0 
+        </span>
+      </div>
+  
+      <div class="remove">
+          <button class="button btn-delete" type="button">Delete</button>
+      </div>
+  
+    </div>
+  </form>
+</div>
+
+    <div class="calculate">
+      <button type="button" class="button btn-success" id="calc-prices-button">Calculate Prices</button>
+    </div>
+
+    <div class="addProductButton">
+      <button type="button" class="button btn-success" id="addExtra">Add Product</button>
+    </div>
+    
+    <div class="newRowItems">
+
+    </div>  
+
+      <script type="text/javascript" src="./js/index.js"></script>
+
+</body>
+</html>
