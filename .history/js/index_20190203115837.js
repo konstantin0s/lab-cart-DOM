@@ -78,9 +78,9 @@ function getTotalPrice() {
 
 
   for (var i = 0; i < products.length; i++) {          
-   products[i].querySelector(".totalP span").innerText = Number(Number(products[i].querySelector(".price span").innerText) * Number(products[i].querySelector(".quantity").value)); 
-  
-    cartTotalPrice.innerText = Number(cartTotalPrice.innerText) + Number(products[i].querySelector(".totalP span").innerText);
+   var ouput =  products[i].querySelector(".price span").innerText = Number(Number(products[i].querySelector(".price span").innerText) * Number(products[i].querySelector(".quantity").value)); 
+   console.log(ouput);
+/
   }
 }
 

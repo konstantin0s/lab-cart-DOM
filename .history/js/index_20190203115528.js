@@ -73,13 +73,13 @@ function updatePriceByProduct(productPrice, index){
 
 function getTotalPrice() {
   var products = document.getElementsByClassName("product");  
-  var cartTotalPrice = document.getElementsByClassName("sum");
+  var cartTotalPrice = document.querySelector(".sum");
+  ;
   cartTotalPrice.innerText = 0;
-
+  console.log(cartTotalPrice);
 
   for (var i = 0; i < products.length; i++) {          
-   products[i].querySelector(".totalP span").innerText = Number(Number(products[i].querySelector(".price span").innerText) * Number(products[i].querySelector(".quantity").value)); 
-  
+    products[i].querySelector(".price span").innerText = Number(Number(products[i].querySelector(".price span").innerText) * Number(products[i].querySelector(".quantity").value));    
     cartTotalPrice.innerText = Number(cartTotalPrice.innerText) + Number(products[i].querySelector(".totalP span").innerText);
   }
 }

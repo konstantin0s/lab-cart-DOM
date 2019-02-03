@@ -1,10 +1,10 @@
 
   document.getElementById("calc-prices-button").addEventListener("click", getTotalPrice);
-  // document.getElementById("addExtra").addEventListener("click", createNewItemRow);
+  document.getElementById("addExtra").addEventListener("click", createNewItemRow);
   // document.getElementById("addExtra").addEventListener("click", createQuantityNode);
   // document.getElementById("addExtra").addEventListener("click", createQuantityInput);
   // document.getElementById("addExtra").addEventListener("click", getPriceByProduct);
-  // document.getElementById("addExtra").addEventListener("click",   createDeleteButton);
+  document.getElementById("addExtra").addEventListener("click",   createDeleteButton);
   // document.getElementById("calc-prices-button").addEventListener("click", calculatePriceProducts);
   
 //         var clickedElement = event.target;
@@ -73,13 +73,11 @@ function updatePriceByProduct(productPrice, index){
 
 function getTotalPrice() {
   var products = document.getElementsByClassName("product");  
-  var cartTotalPrice = document.getElementsByClassName("sum");
+  var cartTotalPrice = document.querySelector("#sumtotalP span");
   cartTotalPrice.innerText = 0;
 
-
   for (var i = 0; i < products.length; i++) {          
-   products[i].querySelector(".totalP span").innerText = Number(Number(products[i].querySelector(".price span").innerText) * Number(products[i].querySelector(".quantity").value)); 
-  
+    products[i].querySelector(".price span").innerText = Number(Number(products[i].querySelector(".price span").innerText) * Number(products[i].querySelector("#quantity").value));    
     cartTotalPrice.innerText = Number(cartTotalPrice.innerText) + Number(products[i].querySelector(".totalP span").innerText);
   }
 }

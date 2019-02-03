@@ -1,10 +1,10 @@
 
   document.getElementById("calc-prices-button").addEventListener("click", getTotalPrice);
-  // document.getElementById("addExtra").addEventListener("click", createNewItemRow);
+  document.getElementById("addExtra").addEventListener("click", createNewItemRow);
   // document.getElementById("addExtra").addEventListener("click", createQuantityNode);
   // document.getElementById("addExtra").addEventListener("click", createQuantityInput);
   // document.getElementById("addExtra").addEventListener("click", getPriceByProduct);
-  // document.getElementById("addExtra").addEventListener("click",   createDeleteButton);
+  document.getElementById("addExtra").addEventListener("click",   createDeleteButton);
   // document.getElementById("calc-prices-button").addEventListener("click", calculatePriceProducts);
   
 //         var clickedElement = event.target;
@@ -55,34 +55,22 @@ function updatePriceByProduct(productPrice, index){
 }
 
 
-// function getTotalPrice(itemNode) {
+function getTotalPrice(itemNode) {
+  var products = document.getElementsByClassName("product");
+  var totalPrice = document.querySelector("#totalP span");
+  totalPrice.innerText = 0;
 
-//   var getQuantity = parseFloat(document.getElementById('price').innerHTML); 
-//   console.log(getQuantity);
-//   var getInput = parseFloat(document.getElementById('quantity').value);
-//   console.log(getInput);
-//   itemNode = getQuantity * getInput;
-//   console.log(itemNode); // it works
-
-//   if (!itemNode) {
-//     document.getElementsByClassName("sum")[0].innerHTML = "Add Numbers";
-//   } else {
-//     document.getElementsByClassName("sum")[0].innerHTML = itemNode;
-//   }
-// }
-
-function getTotalPrice() {
-  var products = document.getElementsByClassName("product");  
-  var cartTotalPrice = document.getElementsByClassName("sum");
-  cartTotalPrice.innerText = 0;
-
-
-  for (var i = 0; i < products.length; i++) {          
-   products[i].querySelector(".totalP span").innerText = Number(Number(products[i].querySelector(".price span").innerText) * Number(products[i].querySelector(".quantity").value)); 
-  
-    cartTotalPrice.innerText = Number(cartTotalPrice.innerText) + Number(products[i].querySelector(".totalP span").innerText);
-  }
-}
+  for (var i = 0; i < products.length; i++) {
+    products[i].querySelector("#totalP span").innerText = Number(Number(products[i]
+      .querySelector("#price").innerText) * Number(products[i].querySelector("#quantity").value));
+      totalPrice.innerText = Number(totalPrice.innerText) + Number(products[i].querySelector("#totalP span").innerText);
+      // if (!total) {
+      //   document.getElementsByClassName("sum")[0].innerHTML = "Add Numbers";
+      // } else {
+      //   document.getElementsByClassName("sum")[0].innerHTML = total;
+      // }
+     }
+   }
 
 
 

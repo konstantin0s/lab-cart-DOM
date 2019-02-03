@@ -56,14 +56,14 @@
           <span>Pijama</span>
         </div>
         <div class="price">
-          $<span>35.00</span>
+          $<span id="price-1">35.00</span>
         </div>
         <div>
           <label>QTY</label>
-          <input type="number" name="quantity" class="quantity">
+          <input type="text" name="quantity" id="quantity-1">
         </div>
         <div class="totalP">
-          $<span>0.00</span>
+          $<span class="sum">0.00</span>
         </div>
         <div class="remove">
             <button class="button btn-danger" type="button">Delete</button>
@@ -75,20 +75,19 @@
             <span>Socks</span>
           </div>
           <div class="price">
-            $<span>35.00</span>
+            $<span id="price-2">35.00</span>
           </div>
           <div>
             <label>QTY</label>
-            <input type="number" name="quantity" class="quantity">
+            <input type="text" name="quantity" id="quantity-2">
           </div>
           <div class="totalP">
-            $<span>0.00</span>
+            $<span class="sum">0.00</span>
           </div>
           <div class="remove">
               <button class="button btn-danger" type="button">Delete</button>
           </div>
         </div>
-
      <div>
     <!--Ouside container-->
      <div class="addBC-container">
@@ -100,7 +99,7 @@
       <button type="button" class="button btn-success" id="addExtra">Add Product</button>
     </div>
     
-    <div id="sumtotalP">
+    <div id="totalP">
         Total $<span class="sum">0.00</span>
     </div>  
     </div>
