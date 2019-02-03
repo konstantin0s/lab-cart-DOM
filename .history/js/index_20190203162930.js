@@ -41,9 +41,11 @@
 
 // var button = document.querySelector(".btn-danger").addEventListener
 // ("click", deleteItem);
-var butt = document.querySelector('.btn-danger');
-
+var butt = document.querySelector('.button');
 var prodList = document.querySelector('.product');
+// console.log(butt.parentNode.parentNode);
+// console.log(prod.firstElementChild);
+
 prodList.addEventListener("click", deleteItem);
 
 function deleteItem(e){
@@ -53,10 +55,9 @@ function deleteItem(e){
  if (e.target.classList.contains("btn-danger")) {
     if (confirm("Are you sure?")) {
       var prod = e.target.parentElement;
-    
-      prodList.remove(prod);
-     } 
-
+      console.log(prod)
+      prodList.remove(div);
+    }
     }
 
 }

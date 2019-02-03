@@ -42,21 +42,23 @@
 // var button = document.querySelector(".btn-danger").addEventListener
 // ("click", deleteItem);
 var butt = document.querySelector('.btn-danger');
-
 var prodList = document.querySelector('.product');
+// console.log(butt.parentNode.parentNode);
+// console.log(prod.firstElementChild);
+
 prodList.addEventListener("click", deleteItem);
 
 function deleteItem(e){
 //   var butt = document.querySelector('.button');
 //  e.target.parentNode.parentNode.remove(e.target.parentNode.parentNode);
 //  getTotalPrice();
- if (e.target.classList.contains("btn-danger")) {
+ if (e.target.classList.contains("button")) {
     if (confirm("Are you sure?")) {
-      var prod = e.target.parentElement;
+      var prod = e.target.parentElement.parentElement;
     
       prodList.remove(prod);
-     } 
-
+    }
+    prodList.remove(prod);
     }
 
 }

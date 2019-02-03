@@ -1,8 +1,7 @@
 
   // document.getElementById("calc-prices-button").addEventListener("click", getTotalPrice);
   // document.getElementById("remove").addEventListener("click", deleteItem);
-  // document.querySelector("#product").addEventListener("click", deleteItem);
-
+  document.querySelector("#product").addEventListener("click", deleteItem(e.target));
 
   // document.getElementById("addExtra").addEventListener("click", createNewItemRow);
   // document.getElementById("addExtra").addEventListener("click", createQuantityNode);
@@ -39,38 +38,13 @@
 // }
 
 
-// var button = document.querySelector(".btn-danger").addEventListener
-// ("click", deleteItem);
-var butt = document.querySelector('.btn-danger');
 
-var prodList = document.querySelector('.product');
-prodList.addEventListener("click", deleteItem);
 
 function deleteItem(e){
-//   var butt = document.querySelector('.button');
-//  e.target.parentNode.parentNode.remove(e.target.parentNode.parentNode);
-//  getTotalPrice();
- if (e.target.classList.contains("btn-danger")) {
-    if (confirm("Are you sure?")) {
-      var prod = e.target.parentElement;
-    
-      prodList.remove(prod);
-     } 
-
-    }
-
+  if (el.classList.contains("btn-danger")) {
+  el.parentElement.parentElement.remove();
 }
-
-// console.log(document.all);
-
-// var product = document.getElementsByClassName('product');
-// console.log(product);
-// for (var i = 0; i < product.length; i++) {
-//   console.log(product[i]);
-// }
-
-
-
+}
 
 function getPriceByProduct(itemNode){
   // var h5 = document.createElement("H5");                       // Create a <p> element
