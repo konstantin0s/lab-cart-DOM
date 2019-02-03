@@ -54,25 +54,23 @@ function updatePriceByProduct(productPrice, index){
 
 }
 
-function getTotalPrice(itemNode) {
+function getTotalPrice(result) {
+   var getPrice = parseFloat(document.getElementById('price').value); 
+   var getQuan = parseInt(document.getElementsByClassName('quantity').value);
+   result = getPrice * getQuan;
+   console.log(result);
 
-  var getQuantity = parseFloat(document.getElementById('price').innerHTML); 
-  console.log(getQuantity);
-  var getInput = parseFloat(document.getElementById('quantity').value);
-  console.log(getInput);
-  itemNode = getQuantity * getInput;
-  console.log(itemNode); // it works
-
-  if (!itemNode) {
-    document.getElementsByClassName("sum")[0].innerHTML = "Add Numbers";
+//    var elements = document.getElementById("my-form").elements;
+//    for (var i = 0; i < elements.length; i++) {
+   
+// }
+ 
+    if (!result) {
+    document.getElementsByClassName("sum")[0].innerHTML = "Add Num";
   } else {
-    document.getElementsByClassName("sum")[0].innerHTML = itemNode;
+    document.getElementsByClassName("sum")[0].innerHTML = "Total price is = $" + result;
   }
-
 }
-
-
-
 
 
 
@@ -127,18 +125,18 @@ function createNewItem(){
                      
 }
 
-window.onload = function(){
-  var calculatePriceButton = document.getElementById('calc-prices-button');
-  var createItemButton = document.getElementById('new-item-create');
-  var deleteButtons = document.getElementsByClassName('btn-delete');
+// window.onload = function(){
+//   var calculatePriceButton = document.getElementById('calc-prices-button');
+//   var createItemButton = document.getElementById('new-item-create');
+//   var deleteButtons = document.getElementsByClassName('btn-delete');
 
-  calculatePriceButton.onclick = getTotalPrice;
-  createItemButton.onclick = createNewItem;
+//   calculatePriceButton.onclick = getTotalPrice;
+//   createItemButton.onclick = createNewItem;
 
-  for(var i = 0; i<deleteButtons.length ; i++){
-    deleteButtons[i].onclick = deleteItem;
-  }
-};
+//   for(var i = 0; i<deleteButtons.length ; i++){
+//     deleteButtons[i].onclick = deleteItem;
+//   }
+// };
 
 
 

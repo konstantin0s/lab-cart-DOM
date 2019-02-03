@@ -54,25 +54,22 @@ function updatePriceByProduct(productPrice, index){
 
 }
 
-function getTotalPrice(itemNode) {
+function getTotalPrice(result) {
+   var getQuantity = parseInt(document.getElementById('price').text); 
+   var getInput = parseInt(document.getElementById('quantity').value);
+   var result = getQuantity * getInput;
 
-  var getQuantity = parseFloat(document.getElementById('price').innerHTML); 
-  console.log(getQuantity);
-  var getInput = parseFloat(document.getElementById('quantity').value);
-  console.log(getInput);
-  itemNode = getQuantity * getInput;
-  console.log(itemNode); // it works
-
-  if (!itemNode) {
-    document.getElementsByClassName("sum")[0].innerHTML = "Add Numbers";
+//    var elements = document.getElementById("my-form").elements;
+//    for (var i = 0; i < elements.length; i++) {
+   
+// }
+ 
+    if (!result) {
+    document.getElementsByClassName("totalP-1")[0].innerHTML = "Add Num";
   } else {
-    document.getElementsByClassName("sum")[0].innerHTML = itemNode;
+    document.getElementsByClassName("totalP-1")[0].innerHTML = "Total price is = $" + result;
   }
-
 }
-
-
-
 
 
 

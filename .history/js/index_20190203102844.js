@@ -56,7 +56,7 @@ function updatePriceByProduct(productPrice, index){
 
 function getTotalPrice(itemNode) {
 
-  var getQuantity = parseFloat(document.getElementById('price').innerHTML); 
+  var getQuantity = parseFloat(document.getElementById('price').value; 
   console.log(getQuantity);
   var getInput = parseFloat(document.getElementById('quantity').value);
   console.log(getInput);
@@ -64,9 +64,9 @@ function getTotalPrice(itemNode) {
   console.log(itemNode); // it works
 
   if (!itemNode) {
-    document.getElementsByClassName("sum")[0].innerHTML = "Add Numbers";
+    document.getElementsByClassName("sum")[0].innerHTML = "Please Enter Numbers";
   } else {
-    document.getElementsByClassName("sum")[0].innerHTML = itemNode;
+    document.getElementsByClassName("sum")[0].innerHTML = "Total price is = $" + itemNode;
   }
 
 }

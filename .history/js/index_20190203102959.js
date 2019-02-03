@@ -64,9 +64,9 @@ function getTotalPrice(itemNode) {
   console.log(itemNode); // it works
 
   if (!itemNode) {
-    document.getElementsByClassName("sum")[0].innerHTML = "Add Numbers";
+    document.getElementsByClassName("sum")[0].innerHTML = "Please Enter Numbers";
   } else {
-    document.getElementsByClassName("sum")[0].innerHTML = itemNode;
+    document.getElementsByClassName("sum")[0].innerHTML = "Total price is = $" + itemNode;
   }
 
 }
