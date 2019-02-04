@@ -97,7 +97,7 @@ spanPrice.appendChild(document.createTextNode("$ " + pars));
 divPrice.appendChild(spanPrice);
 
 prodList.appendChild(newItem);
-console.log(newItem);
+// console.log(newItem);
 form.reset();
 }
 
