@@ -126,14 +126,14 @@ input {
 #addNewProd {
   position: relative;
   float: right;
-  left: -660px;
+  left: -260px;
   top: -300px;
    display: inline;
 }
 
 #calc-prices-button {
    position: relative;
-   left: 110px;
+   left: -110px;
    top: -155px;
    width: 70px;
 }
