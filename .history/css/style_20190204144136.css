@@ -9,9 +9,9 @@ body{
   padding: 40px;
 }
 
-#container {
-  position: relative;
-  top: 300px;
+.container {
+  display: flex;
+  flex-direction: row;
 }
 
 input {
@@ -126,8 +126,8 @@ input {
 #addNewProd {
   position: relative;
   float: right;
-  left: -260px;
-  top: -300px;
+  left: -535px;
+  top: 230px;
    display: inline;
 }
 

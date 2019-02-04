@@ -10,8 +10,8 @@ body{
 }
 
 #container {
-  position: relative;
-  top: 300px;
+  display: flex;
+  flex-direction: row;
 }
 
 input {
@@ -127,7 +127,7 @@ input {
   position: relative;
   float: right;
   left: -260px;
-  top: -300px;
+  top: 430px;
    display: inline;
 }
 
