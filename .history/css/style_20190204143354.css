@@ -128,14 +128,8 @@ input {
   float: right;
   left: -735px;
   top: -230px;
-   display: inline;
-}
 
-#calc-prices-button {
-   position: relative;
-   left: -170px;
-   top: 100px;
-   width: 70px;
+  display: inline;
 }
 
 /*new dinamic products style */

@@ -128,33 +128,15 @@ input {
   float: right;
   left: -735px;
   top: -230px;
-   display: inline;
+
+  display: inline;
 }
 
-#calc-prices-button {
-   position: relative;
-   left: -170px;
-   top: 100px;
-   width: 70px;
-}
-
-/*new dinamic products style */
 .new {
   position: relative;
   top: -100px;
-  left: 170px
+  left: -40px;
 }
-
-.new .name {
-  position: relative;
-  left: -730px;
-}
-
-.new .price {
-  position: relative;
-  left: -730px;
-}
-
 /* 
  .newRowItems .quan {
   position: relative;

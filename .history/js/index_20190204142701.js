@@ -62,7 +62,7 @@ function createNewItem(newProd, newPri) {
 
 
    var newItem = document.createElement("div");
-   newItem.setAttribute("class", "product new");
+   newItem.setAttribute("class", "product");
    newItem.innerHTML = `<div>
       <label>QTY</label>
       <input type="number" name="quantity" class="quantity">

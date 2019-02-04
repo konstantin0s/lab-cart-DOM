@@ -44,7 +44,8 @@ form.addEventListener("submit", function(e) {
   e.preventDefault();
   var newProd = document.getElementById("newProd").value;
   var newPri = document.getElementById("newPrice").value;
-
+  var pars = parseFloat(newPri);
+  pars.toFixed(2);
 
   createNewItem(newProd,  newPri);
 });
@@ -53,8 +54,7 @@ var prodList = document.querySelector("#container");
 
 function createNewItem(newProd, newPri) {
 
-  var pars = parseFloat(newPri);
-  pars.toFixed(2);
+
 
   //   //new div & span product name
   // var div = document.createElement("div");
@@ -62,7 +62,7 @@ function createNewItem(newProd, newPri) {
 
 
    var newItem = document.createElement("div");
-   newItem.setAttribute("class", "product new");
+   newItem.setAttribute("class", "product");
    newItem.innerHTML = `<div>
       <label>QTY</label>
       <input type="number" name="quantity" class="quantity">
@@ -82,22 +82,22 @@ var span = document.createElement("span");
 //  span.appendChild(newProd);
 // //append new product to new span
 span.appendChild(document.createTextNode(newProd));
-nameProd.appendChild(span);
+// nameProd.appendChild(span);
 // // div.appendChild(nameProd);
-  // prodList.appendChild(nameProd);
+// //   prodList.appendChild(div);
 
 
 // //new div & span product name
-var divPrice = document.createElement("div");
-divPrice.setAttribute("class", "price");
-newItem.appendChild(divPrice);
-var spanPrice = document.createElement("span");
+// var divPrice = document.createElement("div");
+// divPrice.setAttribute("class", "price");
+// newItem.appendChild(divPrice);
+// var spanPrice = document.createElement("span");
 // //append new product to new span
-spanPrice.appendChild(document.createTextNode("$ " + pars));
-divPrice.appendChild(spanPrice);
+// spanPrice.appendChild(document.createTextNode("$ " + pars));
+// divPrice.appendChild(spanPrice);
 // spanPrice.appendChild(newPri);
-//  var spanProd = newProd.innerHTML
-// var spanPrice = newPri.innerHTML
+ var spanProd = newProd.innerHTML
+var spanPrice = newPri.innerHTML
 prodList.appendChild(newItem);
 console.log(newItem);
 }

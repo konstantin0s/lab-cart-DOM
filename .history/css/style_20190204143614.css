@@ -131,11 +131,9 @@ input {
    display: inline;
 }
 
-#calc-prices-button {
+#addExtra {
    position: relative;
-   left: -170px;
-   top: 100px;
-   width: 70px;
+   left: 330px;
 }
 
 /*new dinamic products style */
