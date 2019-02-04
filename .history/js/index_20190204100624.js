@@ -103,28 +103,27 @@ function createNewItemRow(e){
   e.preventDefault();
   //get new product value
   var newProd = document.getElementById("newProd").value;
-  var newPri = document.getElementById("newPrice").value;
-  var pars = parseFloat(newPri);
+  var newPrice = document.getElementById("newPrice").value;
   
   //new div & span product name
   var div = document.createElement("div");
   div.className = "product";
   var span = document.createElement("span");
-
+  
   //append new product to new span
   span.appendChild(document.createTextNode(newProd));
   div.appendChild(span);
- 
-
+  prodList.appendChild(div);
 
 //new div & span product name
 var divPrice = document.createElement("div");
+console.log(divPrice);
 divPrice.className = "price";
 var spanPrice = document.createElement("span");
+console.log(spanPrice)
 //append new product to new span
-spanPrice.appendChild(document.createTextNode(pars));
-div.appendChild(spanPrice);
-
+spanPrice.appendChild(document.createTextNode(newPrice));
+divPrice.appendChild(spanPrice);
 
 
 

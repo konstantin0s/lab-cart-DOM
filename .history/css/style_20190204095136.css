@@ -126,12 +126,11 @@ input {
 } */
 
 #addNewProd {
-  position: relative;
   float: right;
   left: -735px;
   top: -230px;
-
-  display: inline;
+  width: 300px;
+  display: inline-block;
 }
 /* 
  .newRowItems .quan {

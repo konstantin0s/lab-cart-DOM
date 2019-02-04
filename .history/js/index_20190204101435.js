@@ -118,13 +118,13 @@ function createNewItemRow(e){
 
 
 //new div & span product name
-var divPrice = document.createElement("div");
-divPrice.className = "price";
+// var divPrice = document.createElement("div");
+// divPrice.className = "price";
 var spanPrice = document.createElement("span");
 //append new product to new span
-spanPrice.appendChild(document.createTextNode(pars));
+spanPrice.appendChild(document.createTextNode(newPrice));
 div.appendChild(spanPrice);
-
+console.log(spanPrice);
 
 
 

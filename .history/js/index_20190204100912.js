@@ -104,16 +104,14 @@ function createNewItemRow(e){
   //get new product value
   var newProd = document.getElementById("newProd").value;
   var newPri = document.getElementById("newPrice").value;
-  var pars = parseFloat(newPri);
   
   //new div & span product name
   var div = document.createElement("div");
   div.className = "product";
   var span = document.createElement("span");
-
+  div.appendChild(span);
   //append new product to new span
   span.appendChild(document.createTextNode(newProd));
-  div.appendChild(span);
  
 
 
@@ -121,10 +119,10 @@ function createNewItemRow(e){
 var divPrice = document.createElement("div");
 divPrice.className = "price";
 var spanPrice = document.createElement("span");
+divPrice.appendChild(spanPrice);
 //append new product to new span
-spanPrice.appendChild(document.createTextNode(pars));
-div.appendChild(spanPrice);
-
+spanPrice.appendChild(document.createTextNode(newPrice));
+// divPrice.appendChild(spanPrice);
 
 
 

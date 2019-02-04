@@ -1,7 +1,6 @@
 
 body{
   overflow-x: hidden;
-  z-index: 1000;
 }
 
 .title {
@@ -125,13 +124,10 @@ input {
   height: 30px;
 } */
 
-#addNewProd {
-  position: relative;
-  float: right;
-  left: -735px;
-  top: -230px;
-
-  display: inline;
+.addNewProd {
+  display: flex;
+  flex-direction: row;
+  left: 300px;
 }
 /* 
  .newRowItems .quan {

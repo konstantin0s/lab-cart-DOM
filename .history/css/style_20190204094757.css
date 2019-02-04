@@ -126,12 +126,15 @@ input {
 } */
 
 #addNewProd {
+  display: flex;
+  flex-direction: column; */
+  justify-content: center; */
   position: relative;
   float: right;
-  left: -735px;
-  top: -230px;
-
-  display: inline;
+  left: -800px;
+  top: 30px;
+  width: 300px;
+  display: inline-block;
 }
 /* 
  .newRowItems .quan {
