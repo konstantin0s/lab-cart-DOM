@@ -1,5 +1,15 @@
 
 
+
+  // document.getElementById("addExtra").addEventListener("click", createNewItemRow);
+  // document.getElementById("addExtra").addEventListener("click", createQuantityNode);
+  // document.getElementById("addExtra").addEventListener("click", createQuantityInput);
+  // document.getElementById("addExtra").addEventListener("click", getPriceByProduct);
+  // document.getElementById("addExtra").addEventListener("click",   createDeleteButton);
+  // document.getElementById("calc-prices-button").addEventListener("click", calculatePriceProducts);
+  
+
+
 var prodList = document.querySelector('#container');
 prodList.addEventListener("click", deleteItem);
 
@@ -15,6 +25,21 @@ function deleteItem(e){
     }
 
 }
+
+
+function getPriceByProduct(itemNode){
+  // var h5 = document.createElement("H5");                       // Create a <p> element
+  // itemNode = document.createTextNode("$0 "); 
+  // h5.className = 'defPrice';     // Create a text node
+  // h5.appendChild(itemNode);                                          // Append the text to <p>
+  // document.getElementsByClassName("newRowItems")[0].appendChild(h5);   
+}
+
+
+function updatePriceByProduct(productPrice, index){
+
+}
+
 
 
 function getTotalPrice() {  //works individual products
@@ -36,11 +61,40 @@ function getTotalPrice() {  //works individual products
 
 
 
+
+
+
+function createQuantityInput() { 
+// var label = document.createElement("LABEL"); 
+// label.className = 'inputQua';    
+// var quaInput = document.createElement("INPUT");
+// label.appendChild(quaInput);
+// document.getElementsByClassName('newRowItems')[0].appendChild(label);
+}
+
+function createDeleteButton(){
+// var button = document.createElement("BUTTON"); 
+// button.className = 'button btn-delete';    
+// var quaDel = document.createTextNode("Delete");
+// button.appendChild(quaDel);
+// document.getElementsByClassName('newRowItems')[0].appendChild(button);
+}
+
+function createQuantityNode(){
+  // var h5 = document.createElement("H5");
+  // h5.className = 'quan';                       // Create a <p> element
+  // var quaNode = document.createTextNode("Quantity: ");      // Create a text node
+  // h5.appendChild(quaNode);                                          // Append the text to <p>
+  // document.getElementsByClassName("newRowItems")[0].appendChild(h5);   
+}
+
+function createItemNode(dataType, itemData){
+
+}
+
+
   //Form submit event
-
- var form = document.querySelector("#addNewProd");
-
-form.addEventListener("submit", function(e) {
+var form = document.querySelector("#addNewProd").addEventListener("click", function(e) {
   e.preventDefault();
   var newProd = document.getElementById("newProd").value;
   var newPri = document.getElementById("newPrice").value;
@@ -50,54 +104,48 @@ form.addEventListener("submit", function(e) {
   createNewItem(newProd,  newPri);
 });
 
-var prodList = document.querySelector("#container");
 
 function createNewItem(newProd, newPri) {
-
-
 
   //   //new div & span product name
   // var div = document.createElement("div");
   // div.setAttribute("class", "product"); //container all new products
+  var nameProd = document.createElement("div");
+  nameProd.setAttribute("class", "name"); 
+  var span = document.createElement("span");
+   span.appendChild(newProd);
+  //append new product to new span
+  span.appendChild(document.createTextNode(newProd));
+  nameProd.appendChild(span);
+  // div.appendChild(nameProd);
+//   prodList.appendChild(div);
 
+
+//new div & span product name
+var divPrice = document.createElement("div");
+divPrice.setAttribute("class", "price");
+newItem.appendChild(divPrice);
+var spanPrice = document.createElement("span");
+//append new product to new span
+spanPrice.appendChild(document.createTextNode("$ " + pars));
+divPrice.appendChild(spanPrice);
+spanPrice.appendChild(newPri);
 
    var newItem = document.createElement("div");
    newItem.setAttribute("class", "product");
    newItem.innerHTML = `<div>
-      <label>QTY</label>
-      <input type="number" name="quantity" class="quantity">
-      </div>
-      <div class="totalP">
-      $<span>0.00</span>
-      </div>
-      <div class="remove" id="remove">
-      <button class="button btn-danger" type="button">Delete</button>
-       </div>
+  <label>QTY</label>
+  <input type="number" name="quantity" class="quantity">
+ </div>
+ <div class="totalP">
+ $<span>0.00</span>
+ </div>
+ <div class="remove" id="remove">
+ <button class="button btn-danger" type="button">Delete</button>
+ </div>
 `;
-
-// var nameProd = document.createElement("div");
-// nameProd.setAttribute("class", "name"); 
-// newItem.appendChild(nameProd);
-// var span = document.createElement("span");
-//  span.appendChild(newProd);
-// //append new product to new span
-// span.appendChild(document.createTextNode(newProd));
-// nameProd.appendChild(span);
-// // div.appendChild(nameProd);
-// //   prodList.appendChild(div);
-
-
-// //new div & span product name
-// var divPrice = document.createElement("div");
-// divPrice.setAttribute("class", "price");
-// newItem.appendChild(divPrice);
-// var spanPrice = document.createElement("span");
-// //append new product to new span
-// spanPrice.appendChild(document.createTextNode("$ " + pars));
-// divPrice.appendChild(spanPrice);
-// spanPrice.appendChild(newPri);
- var spanProd = newProd.innerHTML
-var spanPrice = newPri.innerHTML
+newItem.appendChild(nameProd);
+newItem.appendChild(divPrice);
 prodList.appendChild(newItem);
 console.log(newItem);
 }

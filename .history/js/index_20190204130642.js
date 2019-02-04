@@ -37,10 +37,7 @@ function getTotalPrice() {  //works individual products
 
 
   //Form submit event
-
- var form = document.querySelector("#addNewProd");
-
-form.addEventListener("submit", function(e) {
+var form = document.getElementById("#addNewProd").addEventListener("submit", function(e) {
   e.preventDefault();
   var newProd = document.getElementById("newProd").value;
   var newPri = document.getElementById("newPrice").value;
@@ -64,40 +61,39 @@ function createNewItem(newProd, newPri) {
    var newItem = document.createElement("div");
    newItem.setAttribute("class", "product");
    newItem.innerHTML = `<div>
-      <label>QTY</label>
-      <input type="number" name="quantity" class="quantity">
-      </div>
-      <div class="totalP">
-      $<span>0.00</span>
-      </div>
-      <div class="remove" id="remove">
-      <button class="button btn-danger" type="button">Delete</button>
-       </div>
+  <label>QTY</label>
+  <input type="number" name="quantity" class="quantity">
+ </div>
+ <div class="totalP">
+ $<span>0.00</span>
+ </div>
+ <div class="remove" id="remove">
+ <button class="button btn-danger" type="button">Delete</button>
+ </div>
 `;
 
-// var nameProd = document.createElement("div");
-// nameProd.setAttribute("class", "name"); 
-// newItem.appendChild(nameProd);
-// var span = document.createElement("span");
-//  span.appendChild(newProd);
-// //append new product to new span
-// span.appendChild(document.createTextNode(newProd));
-// nameProd.appendChild(span);
-// // div.appendChild(nameProd);
-// //   prodList.appendChild(div);
+var nameProd = document.createElement("div");
+nameProd.setAttribute("class", "name"); 
+newItem.appendChild(nameProd);
+var span = document.createElement("span");
+ span.appendChild(newProd);
+//append new product to new span
+span.appendChild(document.createTextNode(newProd));
+nameProd.appendChild(span);
+// div.appendChild(nameProd);
+//   prodList.appendChild(div);
 
 
-// //new div & span product name
-// var divPrice = document.createElement("div");
-// divPrice.setAttribute("class", "price");
-// newItem.appendChild(divPrice);
-// var spanPrice = document.createElement("span");
-// //append new product to new span
-// spanPrice.appendChild(document.createTextNode("$ " + pars));
-// divPrice.appendChild(spanPrice);
-// spanPrice.appendChild(newPri);
- var spanProd = newProd.innerHTML
-var spanPrice = newPri.innerHTML
+//new div & span product name
+var divPrice = document.createElement("div");
+divPrice.setAttribute("class", "price");
+newItem.appendChild(divPrice);
+var spanPrice = document.createElement("span");
+//append new product to new span
+spanPrice.appendChild(document.createTextNode("$ " + pars));
+divPrice.appendChild(spanPrice);
+spanPrice.appendChild(newPri);
+
 prodList.appendChild(newItem);
 console.log(newItem);
 }

@@ -96,8 +96,8 @@ function createNewItem(newProd, newPri) {
 // spanPrice.appendChild(document.createTextNode("$ " + pars));
 // divPrice.appendChild(spanPrice);
 // spanPrice.appendChild(newPri);
- var spanProd = newProd.innerHTML
-var spanPrice = newPri.innerHTML
+ var spanProd = newProd.value;
+var spanPrice = newPri.value;
 prodList.appendChild(newItem);
 console.log(newItem);
 }

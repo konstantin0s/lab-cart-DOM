@@ -37,9 +37,7 @@ function getTotalPrice() {  //works individual products
 
 
   //Form submit event
-
- var form = document.querySelector("#addNewProd");
-
+var form = document.getElementById("#addNewProd");
 form.addEventListener("submit", function(e) {
   e.preventDefault();
   var newProd = document.getElementById("newProd").value;
@@ -96,10 +94,9 @@ function createNewItem(newProd, newPri) {
 // spanPrice.appendChild(document.createTextNode("$ " + pars));
 // divPrice.appendChild(spanPrice);
 // spanPrice.appendChild(newPri);
- var spanProd = newProd.innerHTML
-var spanPrice = newPri.innerHTML
-prodList.appendChild(newItem);
-console.log(newItem);
+
+// prodList.appendChild(newItem);
+// console.log(newItem);
 }
 
 //add new product here

@@ -96,10 +96,9 @@ function createNewItem(newProd, newPri) {
 // spanPrice.appendChild(document.createTextNode("$ " + pars));
 // divPrice.appendChild(spanPrice);
 // spanPrice.appendChild(newPri);
- var spanProd = newProd.innerHTML
-var spanPrice = newPri.innerHTML
-prodList.appendChild(newItem);
-console.log(newItem);
+
+// prodList.appendChild(newItem);
+// console.log(newItem);
 }
 
 //add new product here
