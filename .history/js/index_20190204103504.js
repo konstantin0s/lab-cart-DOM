@@ -115,42 +115,31 @@ function createNewItemRow(e){
   
   //new div & span product name
   var div = document.createElement("div");
-  div.className = "product";  //container all products
-  var papaDiv = document.createElement("div");
-  papaDiv.className = "name";
-   div.appendChild(papaDiv);
+  div.className = "product";
   var span = document.createElement("span");
- 
+
   //append new product to new span
   span.appendChild(document.createTextNode(newProd));
   div.appendChild(span);
-  prodList.appendChild(div);
+ 
 
 
 //new div & span product name
 var divPrice = document.createElement("div");
 divPrice.className = "price";
-div.appendChild(divPrice);
-prodList.appendChild(divPrice);
 var spanPrice = document.createElement("span");
 //append new product to new span
 spanPrice.appendChild(document.createTextNode("$ " + pars));
-divPrice.appendChild(spanPrice);
+div.appendChild(spanPrice);
 
-// var products = document.querySelector("#product");
-      var label = document.createElement("label");
-          label.innerHTML = `
-      <label>QTY</label>
-      <input type="number" name="quantity" class="quantity">
-      <div class="totalP">
-      $<span>0.00</span>
-      </div>
-      <div class="remove">
-      <button class="button btn-danger" type="button">Delete</button>
-      </div>
-     `;
-      div.appendChild(label);
-    //  prodList.appendChild(label);
+var products = document.querySelector("#product");
+//       var  label = document.createElement("label");
+//      label.innerHTML = `
+//       <input type="number" name="quantity" class="quantity">
+//       <button type="button" class="button btn-danger">Delete</button>
+//      `;
+
+//       list.appendChild(row);
 
    
   // var divDel = document.createElement("div");

@@ -115,22 +115,21 @@ function createNewItemRow(e){
   
   //new div & span product name
   var div = document.createElement("div");
-  div.className = "product";  //container all products
+  div.className = "product new";
   var papaDiv = document.createElement("div");
-  papaDiv.className = "name";
-   div.appendChild(papaDiv);
+  div.className = "name";
+
   var span = document.createElement("span");
- 
+  prodList.appendChild(div);
   //append new product to new span
   span.appendChild(document.createTextNode(newProd));
   div.appendChild(span);
-  prodList.appendChild(div);
+ 
 
 
 //new div & span product name
 var divPrice = document.createElement("div");
-divPrice.className = "price";
-div.appendChild(divPrice);
+divPrice.className = "price new";
 prodList.appendChild(divPrice);
 var spanPrice = document.createElement("span");
 //append new product to new span
@@ -149,8 +148,8 @@ divPrice.appendChild(spanPrice);
       <button class="button btn-danger" type="button">Delete</button>
       </div>
      `;
-      div.appendChild(label);
-    //  prodList.appendChild(label);
+
+     prodList.appendChild(label);
 
    
   // var divDel = document.createElement("div");

@@ -115,16 +115,16 @@ function createNewItemRow(e){
   
   //new div & span product name
   var div = document.createElement("div");
-  div.className = "product";  //container all products
+  div.className = "product";
   var papaDiv = document.createElement("div");
   papaDiv.className = "name";
    div.appendChild(papaDiv);
   var span = document.createElement("span");
- 
+  prodList.appendChild(div);
   //append new product to new span
   span.appendChild(document.createTextNode(newProd));
   div.appendChild(span);
-  prodList.appendChild(div);
+ 
 
 
 //new div & span product name
@@ -149,8 +149,8 @@ divPrice.appendChild(spanPrice);
       <button class="button btn-danger" type="button">Delete</button>
       </div>
      `;
-      div.appendChild(label);
-    //  prodList.appendChild(label);
+
+     prodList.appendChild(label);
 
    
   // var divDel = document.createElement("div");

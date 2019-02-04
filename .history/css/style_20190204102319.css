@@ -114,6 +114,9 @@ input {
   left: 100px;
 }
 
+#newProd input { 
+  text-transform: uppercase; }
+
 
 .prices .newPrice {
   position: relative;;
@@ -121,7 +124,10 @@ input {
   left: 100px;
 }
 
-.product { text-transform: capitalize; }
+/* .quantity {
+  margin: 0px 5px;
+  height: 30px;
+} */
 
 #addNewProd {
   position: relative;

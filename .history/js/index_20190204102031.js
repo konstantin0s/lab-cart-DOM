@@ -92,12 +92,6 @@ function createItemNode(dataType, itemData){
 
 }
 
-//Add TolowerCase to all products.
-var upProd = document.getElementsByClassName("product");
-for (var i = 0; i < upProd.length; i++) {
-  upProd[i].innerHTML = upProd[i].innerHTML.toLowerCase();
-}
-
   //Form submit event
 var form = document.querySelector("#addNewProd");
 form.addEventListener("submit", createNewItemRow);
@@ -115,43 +109,29 @@ function createNewItemRow(e){
   
   //new div & span product name
   var div = document.createElement("div");
-  div.className = "product";  //container all products
-  var papaDiv = document.createElement("div");
-  papaDiv.className = "name";
-   div.appendChild(papaDiv);
+  div.className = "product";
   var span = document.createElement("span");
- 
+
   //append new product to new span
   span.appendChild(document.createTextNode(newProd));
   div.appendChild(span);
-  prodList.appendChild(div);
+ 
 
 
 //new div & span product name
 var divPrice = document.createElement("div");
 divPrice.className = "price";
-div.appendChild(divPrice);
-prodList.appendChild(divPrice);
 var spanPrice = document.createElement("span");
 //append new product to new span
 spanPrice.appendChild(document.createTextNode("$ " + pars));
-divPrice.appendChild(spanPrice);
+div.appendChild(spanPrice);
 
-// var products = document.querySelector("#product");
-      var label = document.createElement("label");
-          label.innerHTML = `
-      <label>QTY</label>
-      <input type="number" name="quantity" class="quantity">
-      <div class="totalP">
-      $<span>0.00</span>
-      </div>
-      <div class="remove">
-      <button class="button btn-danger" type="button">Delete</button>
-      </div>
-     `;
-      div.appendChild(label);
-    //  prodList.appendChild(label);
 
+
+
+  // var divQua = document.createElement("div");
+  // var quaSpan = document.createElement("input");
+  // divQua.appendChild(quaSpan);
    
   // var divDel = document.createElement("div");
   // divDel.className = "remove";
@@ -261,7 +241,7 @@ window.onload = function(){
 //       <td>${product.price}</td>
 //       <td>${product.quantity}</td>
 //       <td><a href="#" class="btn btn-danger btn-sm
-//        delete">X</></td>
+//        delete">X</a></td>
 //      `;
 
 //       list.appendChild(row);

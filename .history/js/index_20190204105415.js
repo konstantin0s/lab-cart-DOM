@@ -120,11 +120,11 @@ function createNewItemRow(e){
   papaDiv.className = "name";
    div.appendChild(papaDiv);
   var span = document.createElement("span");
- 
+  prodList.appendChild(div);
   //append new product to new span
   span.appendChild(document.createTextNode(newProd));
   div.appendChild(span);
-  prodList.appendChild(div);
+ 
 
 
 //new div & span product name
@@ -150,7 +150,7 @@ divPrice.appendChild(spanPrice);
       </div>
      `;
       div.appendChild(label);
-    //  prodList.appendChild(label);
+     prodList.appendChild(label);
 
    
   // var divDel = document.createElement("div");
