@@ -1,8 +1,9 @@
-
-body{
+body {
   overflow-x: hidden;
   z-index: 1000;
+
 }
+
 
 .title {
   text-align: center;
@@ -49,9 +50,9 @@ input {
 }
 
 .btn-success {
-    color: #fff;
-    background-color: #5cb85c;
-    border-color: #4cae4c;
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
 }
 
 .cost-1 {
@@ -69,20 +70,20 @@ input {
 
 
 
-/* add total & product container */ 
+/* add total & product container */
 .addBC-container {
-    display: flex;
-    flex-direction: column;
-    margin:20px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 20px 0;
 }
 
 /* Add new product button*/
 .addPBtn {
-  margin:10px 0 0 1280px;
+  margin: 10px 0 0 1280px;
   display: flex;
   flex-direction: column;
   width: 6%;
-} 
+}
 
 #cart-total-price {
   display: flex;
@@ -91,51 +92,55 @@ input {
 
 /* total button*/
 .calculate {
-  margin:10px 0 0 1280px;
+  margin: 10px 0 0 1280px;
   display: flex;
   flex-direction: column;
   width: 6%;
-} 
+}
 
 .remove {
   margin: 10px;
-} 
+}
 
 .btn-danger {
-    color: #fff;
-    background-color: #CF000F;
-    border-color: #CF000F;
+  color: #fff;
+  background-color: #CF000F;
+  border-color: #CF000F;
 }
 
 
 .newPrice {
-  position: relative;;
+  position: relative;
+  ;
   top: 200px;
   left: 100px;
 }
 
 
 .prices .newPrice {
-  position: relative;;
+  position: relative;
+  ;
   top: 200px;
   left: 100px;
 }
 
-.product { text-transform: capitalize; }
+.product {
+  text-transform: capitalize;
+}
 
 #addNewProd {
   position: relative;
   float: right;
   left: -660px;
   top: -300px;
-   display: inline;
+  display: inline;
 }
 
 #calc-prices-button {
-   position: relative;
-   left: 110px;
-   top: -155px;
-   width: 70px;
+  position: relative;
+  left: 110px;
+  top: -155px;
+  width: 70px;
 }
 
 #cart-total-price {
@@ -160,6 +165,7 @@ input {
   position: relative;
   left: -850px;
 }
+
 .new .qty {
   position: relative;
   left: 80px;

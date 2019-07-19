@@ -3,57 +3,57 @@
 var prodList = document.querySelector('#container');
 prodList.addEventListener("click", deleteItem);
 
-function deleteItem(e){
- if (e.target.classList.contains("btn-danger")) {
+function deleteItem(e) {
+  if (e.target.classList.contains("btn-danger")) {
     if (confirm("Are you sure?")) {
 
       //removes the product div (which is parent of remove div and remove div is parent of btn-danger)
       var prod = e.target.parentElement.parentElement.remove();
       console.log(prod);
-     } 
-
     }
+
+  }
 
 }
 
 
 function getTotalPrice() {  //works individual products
-  var products = document.getElementsByClassName("product");  
+  var products = document.getElementsByClassName("product");
   var cartTotalPrice = document.querySelector("#cart-total-price span"); //update dinamic on each input.
   cartTotalPrice.innerText = 0;
 
 
-  for (var i = 0; i < products.length; i++) {          
-   products[i].querySelector(".totalP span").innerText =
-   Number(Number(products[i].querySelector(".price span").innerText) *
-    Number(products[i].querySelector(".quantity").value)); 
- 
-   cartTotalPrice.innerText = Number(cartTotalPrice.innerText) + 
-   Number(products[i].querySelector(".totalP span").innerText);
+  for (var i = 0; i < products.length; i++) {
+    products[i].querySelector(".totalP span").innerText =
+      Number(Number(products[i].querySelector(".price span").innerText) *
+        Number(products[i].querySelector(".quantity").value));
+
+    cartTotalPrice.innerText = Number(cartTotalPrice.innerText) +
+      Number(products[i].querySelector(".totalP span").innerText);
   }
 }
 
 
 
 
-  //Form submit event
+//Form submit event
 
- var form = document.querySelector("#addNewProd");
+var form = document.querySelector("#addNewProd");
 
-form.addEventListener("submit", function(e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
   var newProd = document.getElementById("newProd").value;
   var newPri = document.getElementById("newPrice").value;
 
 
-  createNewItem(newProd,  newPri);
+  createNewItem(newProd, newPri);
 });
 
-var prodList = document.querySelector("#container");
+// var prodList = document.querySelector("#container");
 
 function createNewItem(newProd, newPri) {
 
-  var pars = parseFloat(newPri);
+  var pars = parseInt(newPri);
   pars.toFixed(2);
 
   //   //new div & span product name
@@ -61,9 +61,9 @@ function createNewItem(newProd, newPri) {
   // div.setAttribute("class", "product"); //container all new products
 
 
-   var newItem = document.createElement("div");
-   newItem.setAttribute("class", "product new");
-   newItem.innerHTML = `<div>
+  var newItem = document.createElement("div");
+  newItem.setAttribute("class", "product new");
+  newItem.innerHTML = `<div>
       <label class="qty">QTY</label>
       <input type="number" name="quantity" class="quantity">
       </div>
@@ -75,30 +75,30 @@ function createNewItem(newProd, newPri) {
        </div>
 `;
 
-var nameProd = document.createElement("div");
-nameProd.setAttribute("class", "name"); 
-newItem.appendChild(nameProd);
-var span = document.createElement("span");
-//  span.appendChild(newProd);
-// //append new product to new span
-span.appendChild(document.createTextNode(newProd));
-nameProd.appendChild(span);
-// // div.appendChild(nameProd);
+  var nameProd = document.createElement("div");
+  nameProd.setAttribute("class", "name");
+  newItem.appendChild(nameProd);
+  var span = document.createElement("span");
+  //  span.appendChild(newProd);
+  // //append new product to new span
+  span.appendChild(document.createTextNode(newProd));
+  nameProd.appendChild(span);
+  // // div.appendChild(nameProd);
   // prodList.appendChild(nameProd);
 
 
-// //new div & span product name
-var divPrice = document.createElement("div");
-divPrice.setAttribute("class", "price");
-newItem.appendChild(divPrice);
-var spanPrice = document.createElement("span");
-// //append new product to new span
-spanPrice.appendChild(document.createTextNode("$ " + pars));
-divPrice.appendChild(spanPrice);
+  // //new div & span product name
+  var divPrice = document.createElement("div");
+  divPrice.setAttribute("class", "price");
+  newItem.appendChild(divPrice);
+  var spanPrice = document.createElement("span");
+  // //append new product to new span
+  spanPrice.appendChild(document.createTextNode("$ " + pars));
+  divPrice.appendChild(spanPrice);
 
-prodList.appendChild(newItem);
-console.log(newItem);
-form.reset();
+  prodList.appendChild(newItem);
+  console.log(newItem);
+  form.reset();
 }
 
 //add new product here
@@ -113,15 +113,15 @@ var prodList = document.querySelector("#container");
 //   var newPri = document.getElementById("newPrice").value;
 //   var pars = parseFloat(newPri);
 //   pars.toFixed(2);
-  
+
 //   //new div & span product name
 //   var div = document.createElement("div");
 //   div.setAttribute("class", "product"); //container all new products
 //   var nameProd = document.createElement("div");
-//   nameProd.setAttribute("class", "name"); 
+//   nameProd.setAttribute("class", "name");
 //    div.appendChild(nameProd);
 //   var span = document.createElement("span");
- 
+
 //   //append new product to new span
 //   span.appendChild(document.createTextNode(newProd));
 //   nameProd.appendChild(span);
@@ -159,18 +159,18 @@ var prodList = document.querySelector("#container");
 // }
 
 // function createNewItem(){
-                     
+
 // }
 
-window.onload = function(){
+window.onload = function () {
   var calculatePriceButton = document.getElementById('calc-prices-button');
-  var createItemButton = document.getElementById('new-item-create');
+  var createItemButton = document.getElementById('addExtra');
   var deleteButtons = document.getElementsByClassName('btn-delete');
 
   calculatePriceButton.onclick = getTotalPrice;
   createItemButton.onclick = createNewItem;
 
-  for(var i = 0; i<deleteButtons.length ; i++){
+  for (var i = 0; i < deleteButtons.length; i++) {
     deleteButtons[i].onclick = deleteItem;
   }
 };
@@ -220,7 +220,7 @@ window.onload = function(){
 
 // class UI {
 //   static displayProducts() {
-  
+
 //      const products = Store.getProducts();
 
 //      products.forEach((product) => UI.addProductToList(product));
